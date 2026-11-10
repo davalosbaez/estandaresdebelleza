@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BELLA. Experiencia interactiva sobre estándares de belleza contemporáneos, identidad y bienestar integral." />
+  <title>BELLA. — Estándares de belleza</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="intro" class="intro-screen">
+    <div class="intro-orb orb-a"></div><div class="intro-orb orb-b"></div>
+    <div class="intro-card">
+      <span class="eyebrow">CASJ · 2026</span>
+      <h1>BELLA<span>.</span></h1>
+      <p>Una experiencia interactiva sobre cómo aprendemos a mirar la belleza.</p>
+      <button class="primary-btn" id="startBtn">Entrar a BELLA. <span>౨ৎ</span></button>
+      <small>Deslizá, tocá y descubrí.</small>
+    </div>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#feed" aria-label="BELLA inicio">BELLA<span>.</span></a>
+    <nav>
+      <a href="#feed">Inicio</a>
+      <a href="#results">Resultados</a>
+      <a href="#mirror">Espejo</a>
+      <a href="#final">Reflexión</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main>
+    <section id="feed" class="hero-feed section">
+      <div class="hero-copy">
+        <span class="eyebrow">UNA RED SOCIAL FICTICIA · UNA PREGUNTA REAL</span>
+        <h2>¿Quién decidió<br><em>qué es bello?</em></h2>
+        <p class="lead">Entrá al feed. Mirá, compará, descubrí. Después vamos a mirar de nuevo.</p>
+        <div class="scroll-hint">↓ Deslizá para comenzar</div>
+      </div>
+
+      <div class="phone-shell">
+        <div class="phone-top"><span>BELLA.</span><span>9:41</span></div>
+        <div class="profile-strip">
+          <div class="avatar">B</div>
+          <div><strong>bella.experience</strong><small>Descubrí detrás de la imagen</small></div>
+          <button class="follow">Seguir</button>
+        </div>
+        <div class="fake-story-row">
+          <div><span>✦</span><small>Vos</small></div>
+          <div><span>♡</span><small>inspo</small></div>
+          <div><span>✿</span><small>beauty</small></div>
+          <div><span>౨ৎ</span><small>CASJ</small></div>
+        </div>
+        <div id="feedCards" class="feed-cards"></div>
+      </div>
+    </section>
+
+    <section class="question-section section">
+      <div class="section-inner narrow">
+        <span class="eyebrow">PAUSA</span>
+        <h2>¿Te estás comparando?</h2>
+        <p>Respondé rápido. No hay respuesta correcta.</p>
+        <div class="choice-grid">
+          <button class="choice" data-choice="Sí">Sí, un poco</button>
+          <button class="choice" data-choice="No">No</button>
+          <button class="choice" data-choice="Tal vez">No estoy segura</button>
+        </div>
+        <div id="choiceResult" class="choice-result" hidden></div>
+      </div>
+    </section>
+
+    <section id="reveal" class="reveal-section section">
+      <div class="section-inner">
+        <span class="eyebrow">MIRÁ DE NUEVO</span>
+        <h2>¿Qué hay detrás de una imagen?</h2>
+        <div class="reveal-grid">
+          <article class="image-card staged-image">
+            <div class="fake-photo">
+              <div class="sparkles">✦　✧　✦</div>
+              <div class="person-silhouette"><span>♡</span></div>
+              <div class="photo-label">selfie · 19:42</div>
+            </div>
+            <button class="reveal-btn" id="revealBtn">🔍 Descubrir detrás</button>
+          </article>
+          <article class="analysis-panel" id="analysisPanel">
+            <h3>La imagen que viste fue construida.</h3>
+            <ul>
+              <li><span>Filtro</span><b>Activado</b></li>
+              <li><span>Edición facial</span><b>Aplicada</b></li>
+              <li><span>Iluminación</span><b>Modificada</b></li>
+              <li><span>Fotos descartadas</span><b>37</b></li>
+              <li><span>Tiempo preparando la foto</span><b>42 min</b></li>
+            </ul>
+            <p>Acabás de comparar tu realidad con una imagen cuidadosamente construida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="stats-section section">
+      <div class="section-inner">
+        <span class="eyebrow">LOS DATOS HABLAN</span>
+        <h2>Lo que encontramos en el CASJ</h2>
+        <p class="section-sub">77 alumnas participaron de la encuesta. Estos números son parte de la investigación.</p>
+        <div class="stat-grid">
+          <article class="stat-card">
+            <div class="stat-number" data-target="89.6">0</div><span>%</span>
+            <p>Identificó fotos editadas, filtros e influencers con ideales físicos específicos como el contenido que más presión estética genera.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number" data-target="83.1">0</div><span>%</span>
+            <p>Consideró que cultura, medios y redes sociales influyen en qué rasgos son considerados bellos.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number" data-target="71.4">0</div><span>%</span>
+            <p>Consideró que las personas vistas como atractivas suelen recibir más atención social.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number" data-target="61.8">0</div><span>%</span>
+            <p>Señaló que su familia a veces refuerza ideas sobre cómo debería verse una persona.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-number" data-target="63.6">0</div><span>%</span>
+            <p>Dijo que las rutinas de cuidado personal son importantes porque influyen en cómo se ve y se siente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="influence-section section">
+      <div class="section-inner">
+        <span class="eyebrow">¿DE DÓNDE VIENE EL ESTÁNDAR?</span>
+        <h2>Tocá cada influencia.</h2>
+        <div class="influence-map">
+          <button class="influence-node node-social" data-influence="social">📱<span>Redes sociales</span></button>
+          <button class="influence-node node-media" data-influence="media">📺<span>Medios</span></button>
+          <button class="influence-node node-family" data-influence="family">♡<span>Familia</span></button>
+          <button class="influence-node node-culture" data-influence="culture">✿<span>Cultura</span></button>
+          <div class="core">BELLA.<small>¿Quién decide?</small></div>
+        </div>
+        <div class="influence-info" id="influenceInfo">
+          <h3>Elegí una influencia</h3>
+          <p>Descubrí cómo puede participar en la construcción de ideales estéticos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sorting-section section">
+      <div class="section-inner narrow">
+        <span class="eyebrow">AUTOCUIDADO ≠ PRESIÓN</span>
+        <h2>¿Dónde está la diferencia?</h2>
+        <p>Clasificá cada frase. La clave está en <strong>por qué</strong> hacemos algo.</p>
+        <div id="sortCard" class="sort-card">
+          <div class="sort-progress"><span id="sortProgress"></span></div>
+          <div class="sort-quote" id="sortQuote"></div>
+          <div class="sort-actions">
+            <button class="sort-btn care" data-sort="care">♡ Autocuidado</button>
+            <button class="sort-btn pressure" data-sort="pressure">⚠ Presión</button>
+          </div>
+          <div id="sortFeedback" class="sort-feedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mirror" class="mirror-section section">
+      <div class="mirror-wrap">
+        <div class="mirror-visual">
+          <div class="mirror-glass">
+            <div class="mirror-content">
+              <span>DESPUÉS DE MIRAR A CIENTOS DE PERSONAS...</span>
+              <h2>¿Cómo te mirás<br>cuando estás sola?</h2>
+              <div class="mirror-lines"><span>Mi rostro.</span><span>Mi cuerpo.</span><span>Mi piel.</span><span>Mi cabello.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mirror-copy">
+          <span class="eyebrow">EL ESPEJO</span>
+          <h2>¿En qué momento empezamos a mirarnos buscando defectos?</h2>
+          <p>Los estándares pueden influir en la autoimagen, la autoestima, las relaciones y el bienestar. Pero una apariencia nunca puede explicar todo lo que una persona es.</p>
+          <button class="primary-btn" id="mirrorBtn">Seguir mirando <span>౨ৎ</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflection-section section">
+      <div class="section-inner narrow">
+        <span class="eyebrow">AHORA VOS</span>
+        <h2>¿Qué te gusta de vos que no tiene que ver con tu apariencia?</h2>
+        <div class="word-cloud" id="wordCloud">
+          <button>Mi personalidad</button><button>Mi creatividad</button><button>Mi humor</button><button>Mi forma de ayudar</button><button>Mi forma de escuchar</button><button>Mi valentía</button>
+        </div>
+        <div class="custom-message">
+          <input id="messageInput" maxlength="80" placeholder="Escribí tu propia respuesta..." />
+          <button id="addMessage">Agregar</button>
+        </div>
+        <div id="messageWall" class="message-wall"></div>
+      </div>
+    </section>
+
+    <section id="final" class="final-section section">
+      <div class="final-card">
+        <span class="eyebrow">FIN DEL RECORRIDO</span>
+        <h2>Quizás el problema nunca fue<br><em>cómo nos vemos.</em></h2>
+        <p>Quizás fue aprender a mirarnos de una sola manera.</p>
+        <div class="final-divider">౨ৎ</div>
+        <h3>La belleza no debería ser un molde que determina cuánto valemos.</h3>
+        <p class="tiny">Investigación: “Influencia de los estándares de belleza contemporáneos en la construcción de la identidad junto con el bienestar integral de las alumnas de secundaria del Colegio Apostólico San José en el año 2026”.</p>
+        <button class="ghost-btn" id="restartBtn">Volver al inicio</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>BELLA. · CASJ · 2026</span>
+    <span>Una experiencia interactiva basada en la investigación.</span>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close-modal" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
